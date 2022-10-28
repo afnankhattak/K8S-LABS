@@ -14,8 +14,9 @@ spec:
     spec:
       containers:
         - name: counter
-          image: busybox
-          args: [/bin/sh, -c,'i=0; while true; do echo "$i: $(date) Hi $(INSTITUTE) students, Are you learning well?"; i=$((i+1)); sleep 10s; done']
+          image: busybox:1.33.1
+          args: [/bin/sh, -c,'i=0; while true; do echo "$i: $(date) Hi $(INSTITUTE) students, Are you learning well with new changes?"; i=$((i+1)); sleep 10s; done']
           env:
           - name: INSTITUTE
             value: Dice Analytics
+            
